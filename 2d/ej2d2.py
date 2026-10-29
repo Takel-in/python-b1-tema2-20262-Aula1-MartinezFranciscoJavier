@@ -68,12 +68,32 @@ Exemple:
 
 def calculate_max_and_min(list_numbers):
     # Write here your code
-    pass
 
+    # La lista no debería estar vacía.
+    if len(list_numbers) == 0:
+        raise ValueError("ERROR. La lista no contiene elmentos.")
+
+    # Le asigno el primer elemento a las variables de mayor y menor.
+    mayor = menor = list_numbers[0]
+
+    # Si encuentro un valor no numérico doy error y acabo. 
+    # Mientras tanto voy acualizando el mayor y el menor.
+    for val in list_numbers:
+        if not isinstance(val, (int, float)):
+            raise TypeError("ERROR. La lista contiene algún valor no numérico.")
+
+        if val > mayor:
+            mayor = val
+        if val < menor:
+            menor = val
+        print(menor, mayor)
+
+    print(menor, mayor)
+    return menor, mayor
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-# print(
-#     "\nResult: ", calculate_max_and_min([10, 5.1, 0, -2, 31, 55, 70, -10, 200, -55.55])
-# )
+print(
+     "\nResult: ", calculate_max_and_min([10, 5.1, 0, -2, 31, 55, 70, -10, 200, -55.55])
+)

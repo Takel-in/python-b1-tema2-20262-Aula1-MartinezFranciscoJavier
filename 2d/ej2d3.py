@@ -49,20 +49,19 @@ Exemples:
          [0.375, 0.625, 2.3, 0.0, 5.5]
 
 """
-
-
-def division_list(list_numbers: List, number: int) -> List[float]:
+def division_list(list_numbers: List, scalar_number: int) -> List[float]:
     result = []
     for number_in_list in list_numbers:
-        if not isinstance(number_in_list, str):
-            raise IndexError(f"Value {number_in_list} is not numeric.")
-        result.append(number_in_list)
+        if isinstance(number_in_list, str):
+            raise TypeError(f"Value {number_in_list} is not numeric.")
+        result.append(number_in_list / float(scalar_number))
     return result
 
 
-list_numbers = [1.5, 2.5, "9.2", 0, 22]
-scalar_number = "4.0"
+#list_numbers = [1.5, 2.5, "9.2", 0, 22]
+#scalar_number = "4.0"
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
+
 # print(division_list(list_numbers, scalar_number))
