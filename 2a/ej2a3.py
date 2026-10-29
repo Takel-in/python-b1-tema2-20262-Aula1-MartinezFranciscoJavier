@@ -91,23 +91,37 @@ Exemple:
 
 def add_student_by_value(list_students, new_student):
     # Write here your code
-    pass
+    # Añadimo el estudiante.
+    list_students = list_students.copy()
+    list_students.append(new_student)
+    return list_students
 
 
 def add_student_by_reference(list_students, new_student):
     # Write here your code
-    pass
+    list_students.append(new_student)
+    return list_students
 
 
 def main(list_students, new_student_by_value, new_student_by_reference):
     # Write here your code
-    pass
+    # Validamos los valores de entrada.
+    if (
+        not isinstance(list_students, list) 
+        or not isinstance(new_student_by_value, str) 
+        or not isinstance(new_student_by_reference, str)
+        ):
+        raise ValueError("ERROR. Uno de los valores no se corresponde con el tipo esperado")
 
+    add_student_by_value(list_students, new_student_by_value)
+    add_student_by_reference(list_students, new_student_by_reference)
+
+    return list_students
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
-# list_students = ["Alice", "Bob", "Juan"]
-# new_student_by_value = "Maria"
-# new_student_by_reference = "Sofia"
+#list_students = ["Alice", "Bob", "Juan"]
+#new_student_by_value = "Maria"
+#new_student_by_reference = "Sofia"
 
-# main(list_students, new_student_by_value, new_student_by_reference)
+#main(list_students, new_student_by_value, new_student_by_reference)

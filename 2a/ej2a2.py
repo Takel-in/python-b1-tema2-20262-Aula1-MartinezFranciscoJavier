@@ -64,15 +64,24 @@ Sortida:
 95.0
 """
 
+#Validamos que se haya pasado un valor entero.
+def validar_entrada(value):
+    if not isinstance(value, int):
+        raise ValueError("ERROR. Se espera un valor numérico entero.")
 
 def tax_calculation_group_1(value: int):
     # Write here your code
-    pass
+    #Validamos el valor de entrada.
+    validar_entrada(value)
 
+    return 19 * value / 100
 
 def tax_calculation_global(value: int):
     # Write here your code
-    pass
+    #Validamos el valor de entrada.
+    validar_entrada(value)
+
+    return 24 * value / 100
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script

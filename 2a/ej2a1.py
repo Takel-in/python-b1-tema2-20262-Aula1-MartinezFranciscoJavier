@@ -92,7 +92,7 @@ def sum_even_numbers_in_list_do_while(list_numbers):
     # Validamos que los parámetros de entrada sean correctos.
     validar_lista(list_numbers)   
 
-        # sumamos los número pares.
+    # sumamos los número pares.
     cnt = sum = 0
     while True:
         if list_numbers[cnt] % 2 == 0:
@@ -109,7 +109,7 @@ def sum_even_numbers_in_list_do_while(list_numbers):
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el script
 # Si vols provar el teu codi, descomenta les línies següents i executa l'script
 
-shopping_list = [10, 449, 33, 44, 188, 640]
-print(sum_even_numbers_in_list_while(shopping_list))
-print(sum_even_numbers_in_list_for(shopping_list))
-print(sum_even_numbers_in_list_do_while(shopping_list))
+#shopping_list = [10, 449, 33, 44, 188, 640]
+#print(sum_even_numbers_in_list_while(shopping_list))
+#print(sum_even_numbers_in_list_for(shopping_list))
+#print(sum_even_numbers_in_list_do_while(shopping_list))
