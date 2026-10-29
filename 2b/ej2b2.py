@@ -60,10 +60,13 @@ L'any a comprovar serà '2000', de manera que:
 """
 
 
-def check_leap_year(
-    year):
+def check_leap_year(year):
     # Write here your code
-    pass
+
+    if (year % 4 == 0 and year % 100 != 0) or year % 400 == 0:
+        return True
+    else:
+        return False
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta el
@@ -72,4 +75,4 @@ def check_leap_year(
 # Si vols provar el teu codi, descomenta les línies següents i executa
 # l'script
 
-# print(check_leap_year(2000))
+# print(check_leap_year(2100))

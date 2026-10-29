@@ -49,11 +49,18 @@ Exemple:
 """
 
 
-def sum_list_numbers(
-    list_numbers):
+def sum_list_numbers(list_numbers):
     # Write here your code
-    pass
+    # Revisamos que el parámetro recibido sea correcto.
+    if not isinstance(list_numbers, list):
+        raise ValueError("ERROR. Se esperaba una lista.")
 
+    sum = 0
+    for val in list_numbers:
+        if isinstance(val, (int, float)):
+            sum += val
+
+    return sum
 
 # Si quieres probar tu código, descomenta las siguientes líneas y
 # ejecuta el script

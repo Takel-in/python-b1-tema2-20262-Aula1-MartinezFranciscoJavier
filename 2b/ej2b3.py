@@ -47,10 +47,23 @@ Exemple:
 """
 
 
-def triangle_area_calculate(
-    base, height):
+def triangle_area_calculate(base, height):
     # Write here your code
-    pass
+
+    # Validamos la correcta recepción de los valores.
+    if (
+        not isinstance(base, (int, float))
+        or not isinstance(height, (int, float))
+        or base <= 0 or height <= 0
+       ):
+        raise ValueError(
+            "ERROR, los valores deben ser valor "
+            "numéricos positivos mayores de 0"
+        )
+
+    # Multiplicamos la base por la altura y la dividimos
+    # entre 2 para obtener el área de un triángulo.
+    return base * height / 2
 
 
 # Si quieres probar tu código, descomenta las siguientes líneas y ejecuta
